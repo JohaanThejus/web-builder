@@ -3,25 +3,18 @@
   "productName": "jcoder",
   "version": "0.1.0",
   "identifier": "com.jcoder.app",
-  "build": {
-    "beforeDevCommand": "",
-    "devUrl": "http://localhost:5173",
-    "beforeBuildCommand": "npm run build",
-    "frontendDist": "../dist"
-  },
+"build": {
+  "beforeDevCommand": "",
+  "beforeBuildCommand": "npm run build",
+  "devUrl": "http://localhost:5173",
+  "frontendDist": "../dist"
+},
   "app": {
     "windows": [
       {
         "title": "jcoder",
         "width": 800,
         "height": 600
-      },
-      {
-        "label": "new_project_window",
-        "title": "New Project",
-        "width": 600,
-        "height": 400,
-        "resizable": false
       }
     ],
     "security": {

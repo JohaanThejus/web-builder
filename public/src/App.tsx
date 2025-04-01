@@ -1,15 +1,17 @@
-import { Window } from "@tauri-apps/api/window";
-import "./App.css";
+import React from 'react';
+import Workspace from './components/Workspace';
+import Tree from './components/Tree';
 
 function App() {
-  const newProject = () => {
-    console.log("New Project");
-  };
-
   return (
-    <>
-      <button onClick={newProject}>New Project</button>
-    </>
+    <div style={{ display: 'flex', width: '100vw', height: '100vh' }}>
+      <div style={{width: '30vw', height: '100vh', backgroundColor: '#ebebeb', padding: '20px' }}>
+        <Tree />
+      </div>
+      <div style={{ width: '70vw', height: '100vh' }}>
+        <Workspace />
+      </div>
+    </div>
   );
 }
 
