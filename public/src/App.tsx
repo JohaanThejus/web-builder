@@ -1,4 +1,3 @@
-import React from 'react';
 import Workspace from './components/Workspace';
 import Tree from './components/Tree';
 
