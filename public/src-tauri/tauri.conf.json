@@ -12,8 +12,8 @@
   "app": {
     "windows": [
       {
-        "title": "jcoder",
-        "width": 800,
+        "title": "Builder",
+        "width": 1200,
         "height": 600
       }
     ],

@@ -1,8 +1,58 @@
-$primary-color: #4CAF50;
+$primary-color: #ebebeb;
+$secondary-color: #d4d4d4;
+$secondary-secondary-color: #e7e6e6; 
+$font-family: "Fira Code", monospace;
 
-.tree{
+.tree {  
     width: 30vw;
     height: 100vh;
     background-color: $primary-color;
-    padding: 20px;
+    padding: 0;
+
+    .search {
+        padding: 3px;
+        background-color: $secondary-color;
+        height: 30px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-family: $font-family;
+            padding-left: 5px;
+            caret-color: black; // Use this instead of caret-shape
+            outline: none;
+            background-color: $primary-color;
+
+            &:focus {
+                background-color: $secondary-secondary-color;
+            }
+        }
+
+        /* Custom thick cursor */
+        .custom-cursor {
+            position: absolute;
+            top: 50%;
+            left: 5px; // Adjusts the position inside the input
+            width: 3px; // Adjust thickness
+            height: 70%; // Adjust height
+            background-color: black;
+            transform: translateY(-50%);
+            animation: blink 0.8s steps(2) infinite;
+        }
+
+        &.dark {
+
+        }
+    }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
