@@ -1,5 +1,9 @@
 $bg-color: #dddcdc;
 $active-bg-color: #d3d3d3;
+$dark-bg-color: #2c2c2c;
+$dark-active-bg-color: #444;
+$dark-toggle-circle: #fff;
+
 .toggle-btn {
     width: 40px;
     height: 20px;
@@ -12,6 +16,7 @@ $active-bg-color: #d3d3d3;
     display: flex;
     align-items: center;
     padding: 2px;
+    overflow-y: auto;
   
     .toggle-circle {
       width: 17px;
@@ -30,5 +35,16 @@ $active-bg-color: #d3d3d3;
         left: 20px;
       }
     }
-  }
-  
+
+    &.dark {
+      background-color: $dark-bg-color;
+
+      .toggle-circle {
+        background: $dark-toggle-circle;
+      }
+
+      &.active {
+        background-color: $dark-active-bg-color;
+      }
+    }
+}

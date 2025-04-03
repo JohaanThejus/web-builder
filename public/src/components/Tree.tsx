@@ -1,8 +1,8 @@
 import '../../sass/tree.scss';
 
-function Tree() {
+function Tree(props: {theme: boolean}) {
   return (
-    <div className='tree'>
+    <div className={`tree ${props.theme ? 'dark' : ''}`}>
         <div className='search'>
             <input type="text" />
         </div>

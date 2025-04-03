@@ -4,7 +4,8 @@ $primary-line-height: 1.5;
 $seconday-line-height: 1.2;
 $primary-color: #ebebeb;
 $secondary-color: #d4d4d4;
-
+$dark-primary: #0e0e0e;
+$dark-secondary: #1b1b1b;
 
 .workspace {
     width: 70vw;
@@ -15,5 +16,8 @@ $secondary-color: #d4d4d4;
     background-repeat: repeat;
     padding: 5px;
 
-    
+    &.dark{
+        background-color: $dark-primary;
+        background-image: radial-gradient(circle, $dark-secondary 2px, transparent 2px);
+    }
 }

@@ -1,12 +1,10 @@
-import  { useState } from "react";
 import "../../sass/toggle.scss";
 
-function Toggle() {
-  const [isOn, setIsOn] = useState(false);
+function Toggle(props: { theme: boolean; onClick: () => void;}) {
   return (
-    <button 
-      className={`toggle-btn ${isOn ? "active" : ""}`} 
-      onClick={() => setIsOn(!isOn)}
+    <button
+      className={`toggle-btn ${props.theme ? "dark active" : ""}`}
+      onClick={props.onClick}
     >
       <span className="toggle-circle"></span>
     </button>

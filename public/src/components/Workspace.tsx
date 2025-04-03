@@ -1,9 +1,9 @@
 import '../../sass/workspace.scss'
-import Toggle from './Toggle.tsx';
-function Workspace() {
+
+function Workspace(props: {theme: boolean}) {
   return (
-    <div className="workspace">
-      <Toggle />
+    <div className={`workspace ${props.theme ? 'dark' : ''}`}>
+
     </div>
   );
 }

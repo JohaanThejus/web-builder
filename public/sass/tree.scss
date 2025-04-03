@@ -1,7 +1,18 @@
+$bg-color: #dddcdc;
+$active-bg-color: #d3d3d3;
+$dark-bg-color: #2c2c2c;
+$dark-active-bg-color: #444;
+$dark-toggle-circle: #fff;
+
 $primary-color: #ebebeb;
 $secondary-color: #d4d4d4;
-$secondary-secondary-color: #e7e6e6; 
+$secondary-secondary-color: #e7e6e6;
 $font-family: "Fira Code", monospace;
+
+$dark-primary-color: #1e1e1e;
+$dark-secondary-color: #2c2c2c;
+$dark-secondary-secondary-color: #3a3a3a;
+$dark-text: #ffffff;
 
 .tree {  
     width: 30vw;
@@ -24,7 +35,7 @@ $font-family: "Fira Code", monospace;
             border: none;
             font-family: $font-family;
             padding-left: 5px;
-            caret-color: black; // Use this instead of caret-shape
+            caret-color: black;
             outline: none;
             background-color: $primary-color;
 
@@ -33,16 +44,37 @@ $font-family: "Fira Code", monospace;
             }
         }
 
-        /* Custom thick cursor */
         .custom-cursor {
             position: absolute;
             top: 50%;
-            left: 5px; // Adjusts the position inside the input
-            width: 3px; // Adjust thickness
-            height: 70%; // Adjust height
+            left: 5px;
+            width: 3px;
+            height: 70%;
             background-color: black;
             transform: translateY(-50%);
             animation: blink 0.8s steps(2) infinite;
+        }
+    }
+
+    &.dark {
+        background-color: $dark-primary-color;
+
+        .search {
+            background-color: $dark-secondary-color;
+
+            input {
+                background-color: $dark-primary-color;
+                color: $dark-text;
+                caret-color: $dark-text;
+
+                &:focus {
+                    background-color: $dark-secondary-secondary-color;
+                }
+            }
+
+            .custom-cursor {
+                background-color: $dark-text;
+            }
         }
     }
 }
@@ -51,4 +83,48 @@ $font-family: "Fira Code", monospace;
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+.toggle-btn {
+    width: 40px;
+    height: 20px;
+    background-color: $bg-color;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  
+    .toggle-circle {
+      width: 17px;
+      height: 17px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 2px;
+      transition: 0.3s;
+    }
+  
+    &.active {
+      background-color: $active-bg-color;
+  
+      .toggle-circle {
+        left: 20px;
+      }
+    }
+
+    &.dark {
+      background-color: $dark-bg-color;
+
+      .toggle-circle {
+        background: $dark-toggle-circle;
+      }
+
+      &.active {
+        background-color: $dark-active-bg-color;
+      }
+    }
 }
