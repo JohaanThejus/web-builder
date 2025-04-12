@@ -12,7 +12,6 @@ const bcrypt = require("bcrypt");
 
 dotenv.config();
 const app = express();
-app.set("trust proxy", 1); // ✅ Trust Railway proxy
 
 // ✅ MySQL Database Connection
 const db = mysql.createPool({
@@ -23,7 +22,6 @@ const db = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
-  ssl: { rejectUnauthorized: false }, // ✅ Fix TiDB SSL requirement
 });
 
 // ✅ Test Database Connection at Startup

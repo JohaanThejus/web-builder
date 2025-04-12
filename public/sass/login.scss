@@ -1,0 +1,23 @@
+$primary-bg: #f0f0f0;
+$primary-color: #333;
+$primary-font: "Fira Code", monospace;
+
+$secondary-color: #d8d8d8;
+$dark-primary-bg: #1e1e1e;
+$dark-primary-color: #eee;
+$dark-secondary-color: #2b2b2b;
+
+.card{
+    background-color: $primary-bg;
+    color: $primary-color;
+    font-family: $primary-font;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    &.dark{
+        background-color: $dark-primary-bg;
+        color: $dark-primary-color;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+}
